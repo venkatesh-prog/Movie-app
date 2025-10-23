@@ -1,0 +1,135 @@
+/* Full page container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000; /* Black background */
+  font-family: Arial, sans-serif;
+}
+
+/* Card container */
+.login-page .card {
+  background: #fff; /* White card */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+/* Logo styling */
+.login-page .login-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Form heading */
+.login-page .sigin-form h2 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Inputs */
+.login-page .sigin-form input[type="text"],
+.login-page .sigin-form input[type="email"],
+.login-page .sigin-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-page .sigin-form input:focus {
+  border-color: #000;
+}
+
+/* Button */
+.login-page .sigin-form button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-page .sigin-form button:hover {
+  background: #333;
+}
+
+/* Remember me and help text */
+.login-page .from-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-page .remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.login-page .from-help p {
+  color: #555;
+  cursor: pointer;
+}
+
+.login-page .from-help p:hover {
+  text-decoration: underline;
+}
+.login-page .remember label {
+  color: #000; /* Black text inside white card */
+  font-size: 14px;
+  cursor: pointer;
+}
+/* Switch accounts / sign-up link */
+.login-page .swith-accounts {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555; /* Subtle gray text */
+}
+
+.login-page .swith-accounts p {
+  margin: 0;
+}
+
+.login-page .swith-accounts span {
+  color: #000; /* Black link text */
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-page .swith-accounts span:hover {
+  color: #333; /* Slightly darker on hover */
+  text-decoration: underline;
+}
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.loading-screen img {
+  width: 60px;
+}
+@media (max-width: 400px) {
+  .login-page .card {
+    padding: 20px;
+    margin: 10px;
+  }
+}

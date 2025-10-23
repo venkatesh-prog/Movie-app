@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import  Home from './pages/Home/Home'
+import { Routes,Route,useNavigate} from 'react-router-dom'
+import Loginpage from './pages/loginpage/Loginpage'
+import Player from './pages/Player/Player'
+import { useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
+
+
+
+
+const App = () => {
+
+ const navigate = useNavigate();
+
+    useEffect(() => {
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                navigate("/");
+                console.log("User Logged In");
+            } else {
+                navigate("/login");
+                console.log("User Logged Out");
+            }
+        });
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path='/' element={ <Home />} />
+         <Route path='/Login' element={ <Loginpage />} />
+         <Route path='/player/:id' element={<Player />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

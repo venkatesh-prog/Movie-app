@@ -1,0 +1,64 @@
+/* Footer.css */
+
+.footer {
+  background-color: #141414; /* Dark Netflix-style background */
+  color: #999;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-icons img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 25px;
+}
+
+.footer ul li {
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer ul li:hover {
+  color: #fff;
+}
+
+.copy-right {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .footer ul {
+    gap: 10px 15px;
+  }
+  .footer-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
