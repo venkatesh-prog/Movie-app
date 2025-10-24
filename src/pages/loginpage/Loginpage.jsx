@@ -12,7 +12,7 @@ const Loginpage = () => {
   const [password, setpassword] = useState("");
   const [loading, setloading] = useState(false);
 
-  const navigate = useNavigate();
+  
 
   const user_auth = async (e) => {
     e.preventDefault();

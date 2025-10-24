@@ -32,7 +32,7 @@ const TitleCard = ({ tittle, category }) => {
   .catch(err => console.error(err));
 
   cardsRef.current.addEventListener('wheel', handlewheel);
-    }, [category]);
+    }, [options, category]);
   return (
     
     <div className="tittle-card">

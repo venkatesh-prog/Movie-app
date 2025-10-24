@@ -27,7 +27,7 @@ const Player = () => {
       .then(res => res.json())
       .then(res => setApidata(res.results[0]))
       .catch(err => console.error(err));
-  }, []);
+  }, [  id, options]);
 
 
   return (
