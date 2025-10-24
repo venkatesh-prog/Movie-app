@@ -1,1 +1,5 @@
-18
+# Example to use Node 18 LTS
+echo "18" > .nvmrc
+
+# Or for a specific version:
+# echo "16.20.0" > .nvmrc
