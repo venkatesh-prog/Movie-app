@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useState,useMemo } from 'react';
 import { useRef, useEffect } from 'react';
 import './Tittlecard.css';
 // removed unused cards_data import
@@ -9,13 +9,14 @@ import { Link } from 'react-router-dom';
 const TitleCard = ({ tittle, category }) => {
     const [apiData, setApiData] = useState([]);
     const cardsRef = useRef();
-    const options = {
+    const options = useMemo(() => ({
   method: 'GET',
   headers: {
     accept: 'application/json',
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZDkzMWZiZWQ5MmZjNWZmYTEyOWViMDA1NmFiZmI2MiIsIm5iZiI6MTc2MTI1NzE4NC4xNDYsInN1YiI6IjY4ZmFhNmUwODYxOGY5ODgwYTQxN2RjMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xRPmvdsYB4qtjBiBPyOcOyxOVanumwTzFq3ExJ0zbA8'
   }
-};
+}
+), []);
 
 
     const handlewheel = (event) => {
@@ -32,7 +33,7 @@ const TitleCard = ({ tittle, category }) => {
   .catch(err => console.error(err));
 
   cardsRef.current.addEventListener('wheel', handlewheel);
-    }, [options, category]);
+    }, [ category ,options]);
   return (
     
     <div className="tittle-card">

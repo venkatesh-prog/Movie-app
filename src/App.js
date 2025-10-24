@@ -24,7 +24,7 @@ const App = () => {
                 console.log("User Logged Out");
             }
         });
-    }, [ navigate]);
+    }, [navigate]);
 
   return (
     <div>
